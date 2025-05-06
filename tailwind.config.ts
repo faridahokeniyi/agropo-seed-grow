@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        agro: {
+          primary: '#2E7D32',
+          secondary: '#388E3C',
+          accent: '#FBC02D',
+          brown: '#8D6E63',
+          light: '#E8F5E9',
+          dark: '#1B5E20',
+        },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +70,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				sans: ['Nunito', 'sans-serif'],
+				heading: ['Montserrat', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
