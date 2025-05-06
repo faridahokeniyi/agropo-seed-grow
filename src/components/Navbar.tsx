@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Seed, Menu, X } from "lucide-react";
+import { Sprout, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           <a href="#" className="flex items-center gap-2">
-            <Seed className="h-8 w-8 text-agro-primary" />
+            <Sprout className="h-8 w-8 text-agro-primary" />
             <span className="text-xl font-heading font-bold text-agro-dark">
               Agropo <span className="text-agro-accent">Seeds</span>
             </span>

@@ -1,10 +1,10 @@
 
-import { Plant, Tractor, Leaf, Database, FileText, Search } from "lucide-react";
+import { Sprout, Tractor, Leaf, Database, FileText, Search } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const serviceItems = [
   {
-    icon: <Plant className="h-8 w-8" />,
+    icon: <Sprout className="h-8 w-8" />,
     title: "Production of Breeder Seeds",
     description: "We produce high-quality breeder seeds to ensure genetic purity and high yield potential."
   },

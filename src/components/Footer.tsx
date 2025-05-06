@@ -1,5 +1,5 @@
 
-import { Seed, Mail, Phone, MapPin } from "lucide-react";
+import { Sprout, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <Seed className="h-8 w-8 text-agro-accent" />
+              <Sprout className="h-8 w-8 text-agro-accent" />
               <span className="text-xl font-heading font-bold">
                 Agropo <span className="text-agro-accent">Seeds</span>
               </span>
