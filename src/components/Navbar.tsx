@@ -1,14 +1,13 @@
-
-import { useState } from "react";
-import { Sprout, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState } from "react"
+import { Sprout, Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -23,9 +22,9 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <Button 
-              variant="ghost" 
-              size="icon" 
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={toggleMenu}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -39,22 +38,34 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-6 items-center">
-            <a href="#home" className="font-medium hover:text-agro-primary transition-colors">
+            <a
+              href="#home"
+              className="font-medium hover:text-agro-primary transition-colors"
+            >
               Home
             </a>
-            <a href="#about" className="font-medium hover:text-agro-primary transition-colors">
+            <a
+              href="#about"
+              className="font-medium hover:text-agro-primary transition-colors"
+            >
               About Us
             </a>
-            <a href="#services" className="font-medium hover:text-agro-primary transition-colors">
+            <a
+              href="#services"
+              className="font-medium hover:text-agro-primary transition-colors"
+            >
               Services
             </a>
-            <a href="#team" className="font-medium hover:text-agro-primary transition-colors">
-              Our Team
-            </a>
-            <a href="#contact" className="font-medium hover:text-agro-primary transition-colors">
-              Contact
-            </a>
-            <Button className="bg-agro-primary hover:bg-agro-dark text-white">
+            <Button
+              className="bg-agro-primary hover:bg-agro-dark text-white"
+              onClick={() => {
+                setIsMenuOpen(false)
+                const contactSection = document.querySelector("#contact")
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
+            >
               Get In Touch
             </Button>
           </nav>
@@ -68,48 +79,43 @@ const Navbar = () => {
         }`}
       >
         <nav className="flex flex-col py-4 px-6 space-y-4">
-          <a 
-            href="#home" 
+          <a
+            href="#home"
             className="py-2 font-medium hover:text-agro-primary transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </a>
-          <a 
-            href="#about" 
+          <a
+            href="#about"
             className="py-2 font-medium hover:text-agro-primary transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             About Us
           </a>
-          <a 
-            href="#services" 
+          <a
+            href="#services"
             className="py-2 font-medium hover:text-agro-primary transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             Services
           </a>
-          <a 
-            href="#team" 
-            className="py-2 font-medium hover:text-agro-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
+          <Button
+            className="bg-agro-primary hover:bg-agro-dark text-white w-full"
+            onClick={() => {
+              setIsMenuOpen(false)
+              const contactSection = document.querySelector("#contact")
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" })
+              }
+            }}
           >
-            Our Team
-          </a>
-          <a 
-            href="#contact" 
-            className="py-2 font-medium hover:text-agro-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </a>
-          <Button className="bg-agro-primary hover:bg-agro-dark text-white w-full">
             Get In Touch
           </Button>
         </nav>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

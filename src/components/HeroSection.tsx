@@ -28,6 +28,12 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 className="bg-agro-primary hover:bg-agro-dark text-white px-6"
+                onClick={() => {
+                  const contactSection = document.querySelector("#services")
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
               >
                 Our Services
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -36,6 +42,12 @@ const HeroSection = () => {
                 size="lg"
                 variant="outline"
                 className="border-agro-primary text-agro-primary hover:bg-agro-primary/10"
+                onClick={() => {
+                  const contactSection = document.querySelector("#contact")
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
               >
                 Contact Us
               </Button>
