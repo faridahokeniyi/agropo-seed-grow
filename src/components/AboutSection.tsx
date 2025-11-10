@@ -61,8 +61,8 @@ const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://unsplash.com/photos/soybean-field-rows-in-summer-17RKft4BeFM"
-                alt="Agricultural field"
+                src="img/seed.jpg"
+                alt="seeds"
                 className="rounded-xl shadow-xl"
               />
             </div>
